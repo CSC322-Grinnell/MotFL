@@ -1,0 +1,2 @@
+class ResourceMetadatum < ApplicationRecord
+end

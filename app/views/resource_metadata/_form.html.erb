@@ -1,0 +1,42 @@
+<%= form_with(model: resource_metadatum, local: true) do |form| %>
+  <% if resource_metadatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resource_metadatum.errors.count, "error") %> prohibited this resource_metadatum from being saved:</h2>
+
+      <ul>
+      <% resource_metadatum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Title %>
+    <%= form.text_field :Title, id: :resource_metadatum_Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Author %>
+    <%= form.text_field :Author, id: :resource_metadatum_Author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publish_date %>
+    <%= form.date_select :publish_date, id: :resource_metadatum_publish_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Abstract %>
+    <%= form.text_field :Abstract, id: :resource_metadatum_Abstract %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Link %>
+    <%= form.text_field :Link, id: :resource_metadatum_Link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
