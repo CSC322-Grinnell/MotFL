@@ -362,3 +362,1239 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:43:44 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 23ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:43:47 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:46:43 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:46:47 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (268.3ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_path' for #<#<Class:0x007f8c78212a08>:0x007f8c78210938>):
+    32: 
+    33: <br>
+    34: 
+    35: <%= link_to 'New User', new_user_path %>
+  
+app/views/users/index.html.erb:35:in `_app_views_users_index_html_erb__3805088853048362841_70120643795300'
+Started GET "/users" for 132.161.231.136 at 2019-02-24 20:48:56 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:50:39 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'hello' could not be found for ApplicationController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:53:03 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 944ms (Views: 940.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/scaffolds.self-379bd5e3d3d0a94400256051191636985526ec235a510ccf4aeac5a08050a86a.css?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 132.161.231.136 at 2019-02-24 20:53:04 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 132.161.231.136 at 2019-02-24 20:53:05 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/users/new" for 132.161.231.136 at 2019-02-24 20:53:16 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (22.2ms)
+  Rendered users/new.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `is_del' for #<User:0x007f8c796b9ce0>
+Did you mean?  is_deleted):
+    29:   </div>
+    30:   <div class="field">
+    31:     <%= f.label :is_del %><br>
+    32:     <%= f.text_field :is_del %>
+    33:   </div>
+    34:   <div class="actions">
+    35:     <%= f.submit %>
+  
+app/views/users/_form.html.erb:32:in `block in _app_views_users__form_html_erb___319539286269977983_70120659093920'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___319539286269977983_70120659093920'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__2142684014155308272_70120655058860'
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:55:17 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-24 20:55:20 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (144.1ms)
+  Rendered users/new.html.erb within layouts/application (145.8ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `boolean' for #<ActionView::Helpers::FormBuilder:0x007f8c68b4dec0>):
+    29:   </div>
+    30:   <div class="field">
+    31:     <%= f.label :is_deleted %><br>
+    32:     <%= f.boolean :is_deleted %>
+    33:   </div>
+    34:   <div class="actions">
+    35:     <%= f.submit %>
+  
+app/views/users/_form.html.erb:32:in `block in _app_views_users__form_html_erb___319539286269977983_70120661164100'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___319539286269977983_70120661164100'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__2142684014155308272_70120661386840'
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:55:35 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-24 20:55:38 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.4ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 132.161.231.136 at 2019-02-24 20:55:54 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E73BA8Sk+98ZlynEHVtSiKYkiB/Qr6zXSqwFg0LlzF0uazkXUuitccEuDY1/4czamhMWNf2PtEKcouhiOel4sQ==", "user"=>{"first_name"=>"Cara", "last_name"=>"Bresnahan", "email"=>"hiasdf", "password"=>"[FILTERED]", "is_deleted"=>"no"}, "commit"=>"Create User"}
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Cara"], ["last_name", "Bresnahan"], ["email", "hiasdf"], ["password", "hello"], ["created_at", "2019-02-24 20:55:54.388520"], ["updated_at", "2019-02-24 20:55:54.388520"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/1
+Completed 302 Found in 17ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/users/1" for 132.161.231.136 at 2019-02-24 20:55:54 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `is_del' for #<User:0x000000056c7f00>
+Did you mean?  is_deleted):
+    22: 
+    23: <p>
+    24:   <strong>Is del:</strong>
+    25:   <%= @user.is_del %>
+    26: </p>
+    27: 
+    28: <%= link_to 'Edit', edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:25:in `_app_views_users_show_html_erb__692858038395345332_45162420'
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:56:22 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `is_del' for #<User:0x007f8c68ac6c68>
+Did you mean?  is_deleted):
+    21:         <td><%= user.last_name %></td>
+    22:         <td><%= user.email %></td>
+    23:         <td><%= user.password %></td>
+    24:         <td><%= user.is_del %></td>
+    25:         <td><%= link_to 'Show', user %></td>
+    26:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    27:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/users/index.html.erb:24:in `block in _app_views_users_index_html_erb__3805088853048362841_70120514249700'
+app/views/users/index.html.erb:18:in `_app_views_users_index_html_erb__3805088853048362841_70120514249700'
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:56:44 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 132.161.231.136 at 2019-02-24 20:56:58 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-24 20:57:01 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 132.161.231.136 at 2019-02-24 20:57:02 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for 132.161.231.136 at 2019-02-24 20:57:09 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CSgzBQCjMp278hA39QSXOrUPV+Ug9RFhzIyjPZRWPAQ0/ssRlu9kM2NLNH6XvgloiTjJzw3VCfQagk7c71qI6A==", "user"=>{"first_name"=>"Cara", "last_name"=>"Bresnahan", "email"=>"hiasdf", "password"=>"[FILTERED]", "is_deleted"=>"0"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 132.161.231.136 at 2019-02-24 20:57:09 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-24 20:57:29 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-24 20:58:40 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-24 20:59:04 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-25 16:33:50 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 311ms (Views: 299.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 132.161.231.136 at 2019-02-25 16:33:51 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 16:34:16 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (19.8ms)
+  Rendered users/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:34:22 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:36:34 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 16:36:36 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:36:44 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 132.161.231.136 at 2019-02-25 16:36:46 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.6ms)
+  Rendered users/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 43ms (Views: 33.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:36:49 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 132.161.231.136 at 2019-02-25 16:36:51 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:37:04 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 16:37:11 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.8ms)
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 132.161.231.136 at 2019-02-25 16:37:25 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sc1aPbIeo5LH1clVb8+aLXAC5zmTJRwW273l3XVTsYx0G6IpJFL1PB9s7RwNdQR/TDV5E74FBIMNswg8Dl8FYA==", "user"=>{"first_name"=>"henry", "last_name"=>"mahar", "email"=>"advmoaweic;", "password"=>"[FILTERED]", "is_deleted"=>"n"}, "commit"=>"Create User"}
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "henry"], ["last_name", "mahar"], ["email", "advmoaweic;"], ["password", "as cmwio"], ["created_at", "2019-02-25 16:37:25.429703"], ["updated_at", "2019-02-25 16:37:25.429703"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/2
+Completed 302 Found in 19ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/users/2" for 132.161.231.136 at 2019-02-25 16:37:25 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:37:37 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:41:27 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/MotFL/config/routes.rb:8: syntax error, unexpected ':', expecting keyword_end
+  delete '/logout', to : 'sessions#destroy'
+                        ^):
+  
+config/routes.rb:8: syntax error, unexpected ':', expecting keyword_end
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:42:12 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 150ms (Views: 147.4ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 132.161.231.136 at 2019-02-25 16:42:12 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 132.161.231.136 at 2019-02-25 16:42:12 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:43:39 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (418.9ms)
+Completed 500 Internal Server Error in 425ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x00000002f7cd10>:0x007ff1ad9ebf78>):
+    14:       <%= f.submit "Log in", class: "btn btn-primary" %>
+    15:     <% end %>
+    16: 
+    17:     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    18:   </div>
+    19: </div>
+  
+app/views/sessions/new.html.erb:17:in `_app_views_sessions_new_html_erb__1781648983449470249_70337988414560'
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:57:01 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:57:24 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:57:37 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-25 16:58:47 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:58:57 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-25 16:59:19 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 132.161.231.136 at 2019-02-25 16:59:21 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.7ms)
+  Rendered users/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/1" for 132.161.231.136 at 2019-02-25 16:59:44 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9+JjAEPWjHrOib3Re/qrjYJg4bFFHMgQjpq6MPEMueqCXGYl0MMnzODAr4nVXT8Cj4drOg0a7WUNIcJuMiGCw==", "user"=>{"first_name"=>"Cara", "last_name"=>"Bresnahan", "email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]", "is_deleted"=>""}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "hiasdf@gmail.com"], ["updated_at", "2019-02-25 16:59:44.466510"], ["id", 1]]
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/1
+Completed 302 Found in 24ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/users/1" for 132.161.231.136 at 2019-02-25 16:59:44 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 120ms (Views: 117.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 16:59:47 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 16:59:52 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:00:05 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for SessionsController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeTypesInUsers (20190225171638)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "is_deleted" boolean DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "ausers" ("id","first_name","last_name","email","password","is_deleted","created_at","updated_at")
+                     SELECT "id","first_name","last_name","email","password","is_deleted","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "first_name" varchar DEFAULT NULL, "last_name" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "is_deleted" boolean DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "users" ("id","first_name","last_name","email","password","is_deleted","created_at","updated_at")
+                     SELECT "id","first_name","last_name","email","password","is_deleted","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190225171638"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 132.161.231.136 at 2019-02-25 17:23:01 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 48ms (Views: 40.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 17:23:05 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 132.161.231.136 at 2019-02-25 17:23:28 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rWGxb/exC1pb5j5MGydLKdNUk6QWevARW/xRPT2YQkqQt0l7Yf1d9INfGgV5ndV772MNjjta6ISN8rzcRpT2pg==", "user"=>{"first_name"=>"davnwem", "last_name"=>"ascmk ew", "email"=>"asdvei@asdf.com", "password"=>"[FILTERED]", "is_deleted"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "davnwem"], ["last_name", "ascmk ew"], ["email", "asdvei@asdf.com"], ["password", "asdmoie"], ["created_at", "2019-02-25 17:23:28.514685"], ["updated_at", "2019-02-25 17:23:28.514685"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/3
+Completed 302 Found in 22ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/users/3" for 132.161.231.136 at 2019-02-25 17:23:28 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:23:34 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 132.161.231.136 at 2019-02-25 17:23:37 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for 132.161.231.136 at 2019-02-25 17:23:40 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SSBxIQ5QfZR7mKHE/8xlO26ICCGGfWWQQrWdzndDX3A8nnQEnUXWIlXRs5xRa/G0Y2+Cqs57QOXBDuWQtG5kQ==", "user"=>{"first_name"=>"Cara", "last_name"=>"Bresnahan", "email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]", "is_deleted"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password", ""], ["updated_at", "2019-02-25 17:23:40.104886"], ["id", 1]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/1
+Completed 302 Found in 24ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/users/1" for 132.161.231.136 at 2019-02-25 17:23:40 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:23:45 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 132.161.231.136 at 2019-02-25 17:23:48 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:23:52 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2/edit" for 132.161.231.136 at 2019-02-25 17:24:01 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:24:03 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:24:36 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:24:38 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 17:24:43 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.4ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:24:51 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-25 17:24:54 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:24:59 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 17:25:01 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:31:29 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 54ms (Views: 48.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:31:33 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:31:42 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for SessionsController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:32:18 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zFnEne/lfJbxEajsu5Qd85G9YAQk0biv+A8kBKMZYRHxjzyJeakqOCmojKXZLoOhrYr+LgnxoDouAcnl2BXV/Q==", "session"=>{"email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 30ms
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:32:23 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 32.7ms)
+
+
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:32:33 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DOH8k5wN5z5gSn/icJs/Djz3gnAGd9W3/CAYcWfM5OExNwSHCkGxkLjzW6sSIaFcAMAcWitXzSIqLvWQHMBQDQ==", "session"=>{"email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 31ms
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:36:55 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 37ms (Views: 34.6ms)
+
+
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:37:08 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4S9sZlauZ77nVIE4y/9H3Q+RS9musxqi+a5lqO+fFJDc+ZRywOIxED/tpXGpRdmPM6bV84OTAjcvoIhJlJOgfA==", "session"=>{"email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 31ms
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:37:24 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 60ms (Views: 56.1ms)
+
+
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:37:33 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for SessionsController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:38:46 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7LBfcpdryesjnKMlxI4h0y9X33jk+2sRExxLmLvXK8OZDlpXBH5iXQ3VsX1qKbVcIrBV86z9TmSQpzPGePoQw==", "session"=>{"email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered sessions/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 39.9ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:40:08 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 45ms (Views: 42.2ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 17:40:24 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.5ms)
+  Rendered users/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 58ms (Views: 36.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:40:29 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 17:40:39 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.2ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 132.161.231.136 at 2019-02-25 17:41:07 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+GwtkQNMiBcGQnTWCa11BBCZzi0NYCFs8worK8Y7zVzFutWFlQDeud77UJ9rF+tWLK5QByBAOfklBMbKvTd5sA==", "user"=>{"first_name"=>"rojina", "last_name"=>"sharma", "email"=>"newmail@gmail.com", "password"=>"[FILTERED]", "is_deleted"=>"asdfnew"}, "commit"=>"Create User"}
+Unpermitted parameter: :is_deleted
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "rojina"], ["last_name", "sharma"], ["email", "newmail@gmail.com"], ["password", "a msud"], ["created_at", "2019-02-25 17:41:07.412916"], ["updated_at", "2019-02-25 17:41:07.412916"]]
+  [1m[35m (20.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://mother-on-the-front-lines-cbresnahan.c9users.io/users/4
+Completed 302 Found in 30ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/users/4" for 132.161.231.136 at 2019-02-25 17:41:07 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4/edit" for 132.161.231.136 at 2019-02-25 17:41:19 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:41:26 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 132.161.231.136 at 2019-02-25 17:45:56 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 132.161.231.136 at 2019-02-25 17:46:03 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VtyNo9tyv1/WehDOtOdFH1+/U+qU/a4g741Nl+03YT1rCnW3TT7p8Q7DNIfWXdtNY4jNwLndtrU5g6B2ljvV0Q==", "session"=>{"email"=>"hiasdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered sessions/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 132.161.231.136 at 2019-02-25 17:46:13 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/edit" for 132.161.231.136 at 2019-02-25 17:46:31 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2/edit" for 132.161.231.136 at 2019-02-25 17:46:31 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:46:39 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 132.161.231.136 at 2019-02-25 17:47:07 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 132.161.231.136 at 2019-02-25 17:47:08 +0000
+Cannot render console from 132.161.231.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
