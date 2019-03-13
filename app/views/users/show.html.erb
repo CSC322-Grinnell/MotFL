@@ -1,6 +1,46 @@
+
+<style>
+body{
+    background-color: rgb(219, 161, 205);
+    }
+    
+form{
+    text-align:center;
+    border-radius: 20px;
+    
+}
+
+field{
+    text-align:center;
+    border-radius: 20px;
+    
+}
+
+h1{
+     margin-top: -30px;
+    text-align:center;
+}
+
+p{
+     text-align:center;
+}
+img{
+ margin-top: 70px;
+	float:center;
+
+}
+
+
+</style>
+
+<center><%= image_tag("motfl.png", :type => :upload, 
+    :width => 200, :height => 200, :crop => :fill) %></center>
+    
+<h1>User Information</h1>    
 <p id="notice"><%= notice %></p>
 
 <p>
+  
   <strong>First name:</strong>
   <%= @user.first_name %>
 </p>
@@ -22,3 +62,9 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+<p>
+  <strong>Is deleted:</strong>
+  <%= @user.is_deleted %>
+</p>
+
+<p><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Back', users_path %></p>
