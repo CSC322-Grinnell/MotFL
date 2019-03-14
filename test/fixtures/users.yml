@@ -5,11 +5,11 @@ one:
   last_name: MyString
   email: MyString
   password: MyString
-  is_del: MyString
+  is_deleted: MyString
 
 two:
   first_name: MyString
   last_name: MyString
   email: MyString
   password: MyString
-  is_del: MyString
+  is_deleted: MyString
