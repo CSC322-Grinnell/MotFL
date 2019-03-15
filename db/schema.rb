@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190225171733) do
+ActiveRecord::Schema.define(version: 20190315164052) do
 
   create_table "resource_metadata", force: :cascade do |t|
     t.string "Title"
@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(version: 20190225171733) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "resource_tag", force: :cascade do |t|
+  create_table "resource_tags", force: :cascade do |t|
     t.integer "resource_id"
     t.integer "tag_id"
-    t.index ["resource_id"], name: "index_resource_tag_on_resource_id"
-    t.index ["tag_id"], name: "index_resource_tag_on_tag_id"
+    t.index ["resource_id"], name: "index_resource_tags_on_resource_id"
+    t.index ["tag_id"], name: "index_resource_tags_on_tag_id"
   end
 
   create_table "tags", force: :cascade do |t|
