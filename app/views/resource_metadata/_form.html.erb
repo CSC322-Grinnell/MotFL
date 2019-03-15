@@ -39,10 +39,12 @@
   </div>
 
   <div class="field">
-    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-      <%for tag in @Tags%>
-        <option value="<%=tag.id%>"><%=tag.title%></option>
-      <%end>
+    <select class="js-example-basic-multiple" name="add_tags[]" multiple="multiple">
+      <%if(@cur_tags != nil) %>
+        <%for tag in @cur_tags%>
+          <option value="<%=tag.id%>"><%=tag.title%></option>
+        <%end%>
+      <%end%>
     </select>
   </div>
 

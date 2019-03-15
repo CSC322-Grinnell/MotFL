@@ -24,7 +24,9 @@ class ResourceMetadataController < ApplicationController
   # POST /resource_metadata
   # POST /resource_metadata.json
   def create
+    @cur_tags = tags.all
     @resource_metadatum = ResourceMetadatum.new(resource_metadatum_params)
+    @tags = params[:add_tags]
 
     respond_to do |format|
       if @resource_metadatum.save
