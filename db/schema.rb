@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190224192656) do
+ActiveRecord::Schema.define(version: 20190315164052) do
+
+  create_table "resource_metadata", force: :cascade do |t|
+    t.string "Title"
+    t.string "Author"
+    t.date "publish_date"
+    t.string "Abstract"
+    t.string "Link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "resource_tags", force: :cascade do |t|
+    t.integer "resource_id"
+    t.integer "tag_id"
+    t.index ["resource_id"], name: "index_resource_tags_on_resource_id"
+    t.index ["tag_id"], name: "index_resource_tags_on_tag_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "Tag_Title"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -20,6 +41,7 @@ ActiveRecord::Schema.define(version: 20190224192656) do
     t.boolean "is_deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end

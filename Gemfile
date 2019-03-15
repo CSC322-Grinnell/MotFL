@@ -5,9 +5,11 @@ gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.2.0'
 gem 'coffee-rails', '4.2.2'
-gem 'jquery-rails', '4.3.1'
+gem 'jquery-rails', '4.3.3'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
+gem 'bcrypt',       '3.1.12'
+gem 'select2-rails', '4.0.3'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
@@ -19,6 +21,7 @@ group :development do
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
+  gem 'hirb',									 '0.7.3'
 end
 
 group :production do
