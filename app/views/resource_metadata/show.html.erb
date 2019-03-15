@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @resource_metadatum.Title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @resource_metadatum.Author %>
+</p>
+
+<p>
+  <strong>Publish date:</strong>
+  <%= @resource_metadatum.publish_date %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @resource_metadatum.Abstract %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @resource_metadatum.Link %>
+</p>
+
+<%= link_to 'Edit', edit_resource_metadatum_path(@resource_metadatum) %> |
+<%= link_to 'Back', resource_metadata_path %>

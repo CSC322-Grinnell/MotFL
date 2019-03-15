@@ -1,0 +1,2 @@
+module ResourceMetadataHelper
+end
