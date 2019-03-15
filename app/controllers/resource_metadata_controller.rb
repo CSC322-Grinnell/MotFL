@@ -14,6 +14,7 @@ class ResourceMetadataController < ApplicationController
 
   # GET /resource_metadata/new
   def new
+    @cur_tags = Tag.all
     @resource_metadatum = ResourceMetadatum.new
   end
 
@@ -24,12 +25,28 @@ class ResourceMetadataController < ApplicationController
   # POST /resource_metadata
   # POST /resource_metadata.json
   def create
-    @cur_tags = tags.all
     @resource_metadatum = ResourceMetadatum.new(resource_metadatum_params)
-    @tags = params[:add_tags]
-
+    @add_tags = params[:add_tags]
+    my_tags = Array.new
     respond_to do |format|
+      #TODO: check for user permissions to add tags
+      for tag in @add_tags
+        if((temp = Tag.find_by Tag_Title: tag) == nil)
+          my_tags << Tag.new(Tag_Title: tag)
+        else
+          my_tags << temp
+        end
+      end
       if @resource_metadatum.save
+        for tag in my_tags
+          if tag.save
+            tag_link = Resource_Tag.new(resource_id: @resource_metadatum.id.to_i, tag_id: tag.id.to_i)
+            tag_link.save
+          else
+            format.html { render :new}
+            format.json { render json: @tag.erros, status: :unprocessable_entity }
+          end
+        end
         format.html { redirect_to @resource_metadatum, notice: 'Resource metadatum was successfully created.' }
         format.json { render :show, status: :created, location: @resource_metadatum }
       else

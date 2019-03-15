@@ -40,11 +40,7 @@
 
   <div class="field">
     <select class="js-example-basic-multiple" name="add_tags[]" multiple="multiple">
-      <%if(@cur_tags != nil) %>
-        <%for tag in @cur_tags%>
-          <option value="<%=tag.id%>"><%=tag.title%></option>
-        <%end%>
-      <%end%>
+      <%= options_from_collection_for_select(@cur_tags.all, :id, :Tag_Title) %>
     </select>
   </div>
 
