@@ -4,7 +4,7 @@ class ResourceMetadataController < ApplicationController
   # GET /resource_metadata
   # GET /resource_metadata.json
   def index
-    @resource_metadata = ResourceMetadatum.all
+    @resource_metadata = ResourceMetadatum.search(params[:search])
   end
 
   # GET /resource_metadata/1
@@ -88,6 +88,6 @@ class ResourceMetadataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_metadatum_params
-      params.require(:resource_metadatum).permit(:Title, :Author, :publish_date, :Abstract, :Link)
+      params.require(:resource_metadatum).permit(:Title, :Author, :publish_date, :Abstract, :Link, :search)
     end
 end

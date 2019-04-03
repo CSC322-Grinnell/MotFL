@@ -2,6 +2,12 @@
 
 <h1>Resource Metadata</h1>
 
+<h4>Search resources</h4>
+  <%= form_tag(resource_metadata_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+
 <table>
   <thead>
     <tr>
@@ -15,7 +21,8 @@
   </thead>
 
   <tbody>
-    <% @resource_metadata.each do |resource_metadatum| %>
+    <% if @resource_metadata %>
+      <% @resource_metadata.each do |resource_metadatum| %>
       <tr>
         <td><%= resource_metadatum.Title %></td>
         <td><%= resource_metadatum.Author %></td>
@@ -26,6 +33,7 @@
         <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum) %></td>
         <td><%= link_to 'Destroy', resource_metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
