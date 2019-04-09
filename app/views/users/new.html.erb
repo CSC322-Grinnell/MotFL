@@ -1,44 +1,24 @@
 <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet">-->
       
-<style>
-body{
-    background-color: rgb(219, 161, 205);
-    }
-    
-form{
-    text-align:center;
-    border-radius: 20px;
-    
-}
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:30px">
+     
+    <a href="https://mothersonthefrontline.com"> <%= image_tag("motfl.png", :type => :upload, 
+    :width => 70, :height => 70, :crop => :fill) %> MOTHERS ON THE FRONTLINE</a></h1>
+    <p>Mothers speaking openly about children's mental health</p>
+  </div>
+</div>
 
-field{
-    text-align:center;
-    border-radius: 20px;
-    
-}
+<div class="topnav">
+  <a href="/users">All Users</a>
+  <a class="active" href="/users/new">Add User</a>
+  <a href="/resources">Resources</a>
+  <a href="/resources/new">Add Resources</a>
+</div>
 
-h1{
-     margin-top: -30px;
-    text-align:center;
-}
-
-p{
-     text-align:center;
-}
-img{
- margin-top: 70px;
-	float:center;
-
-}
-
-
-</style>
-
-<center><%= image_tag("motfl.png", :type => :upload, 
-    :width => 200, :height => 200, :crop => :fill) %></center>
-
-<h1>New User</h1>
+<center><h1>New User</h1></center>
 
 <%= render 'form' %>
 
