@@ -12,11 +12,30 @@
 </div>
 
 <div class="topnav">
-  <a href="/users">All Users</a>
-  <a class="active" href="/users/new">Add User</a>
-  <a href="/resources">Resources</a>
-  <a href="/resources/new">Add Resources</a>
+  
+   <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/users/new"> New User</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/resources';"> Resources </a> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/resources/new"> New Resource</a>
+    </div>
+  </div> 
+  
+  <a href=#>My Information</a>
+  <a href=#>Login</a>
+  
 </div>
+
 
 <center><h1>New User</h1></center>
 
