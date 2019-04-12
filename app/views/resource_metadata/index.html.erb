@@ -11,6 +11,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Title</th>
       <th>Author</th>
       <th>Publish date</th>
@@ -24,6 +25,7 @@
     <% if @resource_metadata %>
       <% @resource_metadata.each do |resource_metadatum| %>
       <tr>
+        <td><%= resource_metadatum.id %></td>
         <td><%= resource_metadatum.Title %></td>
         <td><%= resource_metadatum.Author %></td>
         <td><%= resource_metadatum.publish_date %></td>
