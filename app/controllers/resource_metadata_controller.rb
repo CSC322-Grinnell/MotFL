@@ -54,6 +54,7 @@ class ResourceMetadataController < ApplicationController
         format.json { render json: @resource_metadatum.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @resource_metadatum #this method will raise an exception if the user doesn't have permissions to create a resource
   end
 
   # PATCH/PUT /resource_metadata/1

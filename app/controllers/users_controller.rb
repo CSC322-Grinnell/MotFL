@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    @cur_roles = Role.all
     @user = User.new
   end
 
@@ -66,6 +67,9 @@ class UsersController < ApplicationController
     def set_user
       @user = User.find(params[:id])
     end
+    
+    #not sure if this is the right spot
+    #@cur_roles = Role.all
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params

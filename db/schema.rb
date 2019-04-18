@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190315164052) do
+ActiveRecord::Schema.define(version: 20190412220417) do
 
   create_table "resource_metadata", force: :cascade do |t|
     t.string "Title"
@@ -27,6 +27,19 @@ ActiveRecord::Schema.define(version: 20190315164052) do
     t.integer "tag_id"
     t.index ["resource_id"], name: "index_resource_tags_on_resource_id"
     t.index ["tag_id"], name: "index_resource_tags_on_tag_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roles_users", id: false, force: :cascade do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+    t.index ["role_id"], name: "index_roles_users_on_role_id"
+    t.index ["user_id"], name: "index_roles_users_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|
