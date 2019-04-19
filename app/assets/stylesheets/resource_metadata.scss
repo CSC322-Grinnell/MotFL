@@ -1,5 +1,5 @@
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("motfl_header.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("motfl_header.jpg");
   height: 30%;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,14 +40,73 @@
 }
 
 .topnav a:hover {
-  background-color: #A988AB;
-  color: black;
+  background-color: #890076;
+  color: white;
 }
 
 .topnav a.active {
   background-color: #7F0087;
   color: white;
 }
+
+
+
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #890076;
+    border-radius: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #F6D3FD;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
 
 
 
@@ -87,7 +146,7 @@ p{
      color: white;
 }
 
-p a{
+p link_to{
     color: white;
 }
 img{
@@ -98,5 +157,9 @@ img{
 table{
     width: 80%;
     text-align: left;
+}
+
+link to{
+    color: white;
 }
 

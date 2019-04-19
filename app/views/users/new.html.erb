@@ -6,13 +6,14 @@
     <h1 style="font-size:30px">
      
     <a href="https://mothersonthefrontline.com"> <%= image_tag("motfl.png", :type => :upload, 
-    :width => 70, :height => 70, :crop => :fill) %> MOTHERS ON THE FRONTLINE</a></h1>
+    :width => 70, :height => 70, :crop => :fill ) %> MOTHERS ON THE FRONTLINE</a></h1>
     <p>Mothers speaking openly about children's mental health</p>
   </div>
 </div>
 
+
 <div class="topnav">
-  
+   <a href="https://mothersonthefrontline.com"> About </a>
    <div class="dropdown">
     <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
       <i class="fa fa-caret-down"></i>
@@ -32,7 +33,7 @@
   </div> 
   
   <a href=#>My Information</a>
-  <a href=#>Login</a>
+  <a href=/login>Login</a>
   
 </div>
 
@@ -41,4 +42,4 @@
 
 <%= render 'form' %>
 
-<p><%=  link_to 'Back', users_path %><p>
+<p><%=  link_to 'Back', users_path, class: 'link_color' %><p>

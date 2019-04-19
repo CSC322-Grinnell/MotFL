@@ -8,8 +8,9 @@
   </div>
 </div>
 
+
 <div class="topnav">
-  
+   <a href="https://mothersonthefrontline.com"> About </a>
    <div class="dropdown">
     <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
       <i class="fa fa-caret-down"></i>
@@ -29,14 +30,13 @@
   </div> 
   
   <a href=#>My Information</a>
-  <a href=#>Login</a>
+  <a href=/login>Login</a>
   
 </div>
 
 
-
 <h1>New Resource Metadatum</h1>
 
-<%= render 'form', resource_metadatum: @resource_metadatum %>
+<%= render 'form', resource_metadatum: @resource_metadatum, class: 'link_color' %>
 
-<%= link_to 'Back', resource_metadata_path %>
+<p><%= link_to 'Back', resource_metadata_path, class: 'link_color' %></p>

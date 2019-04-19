@@ -1,5 +1,5 @@
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("motfl_header.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("motfl_header.jpg");
   height: 30%;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #CA8CC2;
+  background-color: #F6D3FD;
   color: black;
 }
 
@@ -146,7 +146,7 @@ p{
      color: white;
 }
 
-p a{
+p link_to{
     color: white;
 }
 img{
@@ -159,7 +159,6 @@ table{
     text-align: left;
 }
 
-link to{
-    color: white;
+.link_color {
+color: white !important;
 }
-

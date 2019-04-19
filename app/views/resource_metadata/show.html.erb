@@ -9,7 +9,7 @@
 </div>
 
 <div class="topnav">
-  
+   <a href="https://mothersonthefrontline.com"> About </a>
    <div class="dropdown">
     <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
       <i class="fa fa-caret-down"></i>
@@ -62,5 +62,5 @@
   <%= @resource_metadatum.Link %>
 </p>
 
-<%= link_to 'Edit', edit_resource_metadatum_path(@resource_metadatum) %> |
-<%= link_to 'Back', resource_metadata_path %>
+<p><%= link_to 'Edit', edit_resource_metadatum_path(@resource_metadatum), class: 'link_color' %> |
+<%= link_to 'Back', resource_metadata_path, class: 'link_color' %></p>

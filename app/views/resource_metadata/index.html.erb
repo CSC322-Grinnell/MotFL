@@ -7,8 +7,10 @@
     <p>Mothers speaking openly about children's mental health</p>
   </div>
 </div>
+
+
 <div class="topnav">
-  
+   <a href="https://mothersonthefrontline.com"> About </a>
    <div class="dropdown">
     <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
       <i class="fa fa-caret-down"></i>
@@ -28,10 +30,9 @@
   </div> 
   
   <a href=#>My Information</a>
-  <a href=#>Login</a>
+  <a href=/login>Login</a>
   
 </div>
-
 
 <p id="notice"><%= notice %></p>
 
@@ -57,9 +58,9 @@
         <td><%= resource_metadatum.publish_date %></td>
         <td><%= resource_metadatum.Abstract %></td>
         <td><%= resource_metadatum.Link %></td>
-        <td><%= link_to 'Show', resource_metadatum %></td>
-        <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum) %></td>
-        <td><%= link_to 'Destroy', resource_metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', resource_metadatum, class: 'link_color' %></td>
+        <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum), class: 'link_color' %></td>
+        <td><%= link_to 'Destroy', resource_metadatum, class: 'link_color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -67,4 +68,4 @@
 
 <br>
 
-<%= link_to 'New Resource Metadatum', new_resource_metadatum_path %>
+<%= link_to 'New Resource Metadatum', new_resource_metadatum_path, class: 'link_color' %>

@@ -10,7 +10,7 @@
 
 
 <div class="topnav">
-  
+   <a href="https://mothersonthefrontline.com"> About </a>
    <div class="dropdown">
     <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
       <i class="fa fa-caret-down"></i>
@@ -30,7 +30,7 @@
   </div> 
   
   <a href=#>My Information</a>
-  <a href=#>Login</a>
+  <a href=/login>Login</a>
   
 </div>
 
@@ -58,9 +58,9 @@
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, class: 'link_color' %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: 'link_color' %></td>
+        <td><%= link_to 'Destroy', user, class: 'link_color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -68,4 +68,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: 'link_color' %>
