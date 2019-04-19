@@ -7,7 +7,7 @@ class ResourceMetadatum < ApplicationRecord
 			resources = ResourceMetadatum.joins(:tags).where('Tag_Title LIKE :search OR
 				Author LIKE :search OR 
 			   Title LIKE :search OR
-			   Abstract LIKE :search', search: "%#{search.downcase}%")
+			   Abstract LIKE :search', search: "%#{search.downcase}%").distinct
 			if resources
 				resources
 			end

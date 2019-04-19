@@ -33,24 +33,26 @@ class ResourceMetadataController < ApplicationController
       #TODO: check for user permissions to add tags
       if @resource_metadatum.save
         #Save any new tags to DB
-        for tag in @add_tags
-          tag_link = -1
-          if((temp = Tag.find_by id: tag) == nil)
-            new_tag = Tag.new(Tag_Title: tag);
-            if new_tag.save
-              puts("Creating new tag #{tag} with id #{new_tag.id}")
-              tag_link = ResourceTag.new(resource_metadatum_id: @resource_metadatum.id.to_i, tag_id: new_tag.id.to_i)
+        if @add_tags != nil
+          for tag in @add_tags
+            tag_link = -1
+            if((temp = Tag.find_by id: tag) == nil)
+              new_tag = Tag.new(Tag_Title: tag);
+              if new_tag.save
+                puts("Creating new tag #{tag} with id #{new_tag.id}")
+                tag_link = ResourceTag.new(resource_metadatum_id: @resource_metadatum.id.to_i, tag_id: new_tag.id.to_i)
+              else
+                format.html { render :new}
+                format.json { render json: @tag.errors, status: :unprocessable_entity }
+              end
             else
-              format.html { render :new}
-              format.json { render json: @tag.errors, status: :unprocessable_entity }
+              puts("Found existing tag #{temp.Tag_Title} with id #{temp.id}")
+              tag_link = ResourceTag.new(resource_metadatum_id: @resource_metadatum.id.to_i, tag_id: temp.id.to_i)
             end
-          else
-            puts("Found existing tag #{temp.Tag_Title} with id #{temp.id}")
-            tag_link = ResourceTag.new(resource_metadatum_id: @resource_metadatum.id.to_i, tag_id: temp.id.to_i)
-          end
-          if not tag_link.save
-            format.html { render :new}
-            format.json { render json: tag_link.errors, status: :unprocessable_entity }
+            if not tag_link.save
+              format.html { render :new}
+              format.json { render json: tag_link.errors, status: :unprocessable_entity }
+            end
           end
         end
         format.html { redirect_to @resource_metadatum, notice: 'Resource metadatum was successfully created.' }
