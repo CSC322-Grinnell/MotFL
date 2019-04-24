@@ -1,3 +1,20 @@
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:30px">
+     
+    <a href="https://mothersonthefrontline.com"> <%= image_tag("motfl.png", :type => :upload, 
+    :width => 70, :height => 70, :crop => :fill ) %> MOTHERS ON THE FRONTLINE</a></h1>
+    <p>Mothers speaking openly about children's mental health</p>
+  </div>
+</div>
+
+<div class="topnav">
+  <a href="/users">All Users</a>
+  <a href="/users/new">Add User</a>
+  <a href="/resources">Resources</a>
+  <a href="/resources/new">Add Resources</a>
+</div>
+
 <h1>Editing Resource Metadatum</h1>
 
 <%= render 'form', resource_metadatum: @resource_metadatum %>

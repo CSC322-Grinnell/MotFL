@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20190412220417) do
   end
 
   create_table "resource_tags", force: :cascade do |t|
-    t.integer "resource_id"
+    t.integer "resource_metadatum_id"
     t.integer "tag_id"
-    t.index ["resource_id"], name: "index_resource_tags_on_resource_id"
+    t.index ["resource_metadatum_id"], name: "index_resource_tags_on_resource_metadatum_id"
     t.index ["tag_id"], name: "index_resource_tags_on_tag_id"
   end
 

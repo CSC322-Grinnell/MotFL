@@ -4,7 +4,7 @@ class ResourceMetadataController < ApplicationController
   # GET /resource_metadata
   # GET /resource_metadata.json
   def index
-    @resource_metadata = ResourceMetadatum.all
+    @resource_metadata = ResourceMetadatum.search(params[:search])
   end
 
   # GET /resource_metadata/1
@@ -25,26 +25,34 @@ class ResourceMetadataController < ApplicationController
   # POST /resource_metadata
   # POST /resource_metadata.json
   def create
+    puts('Creating new resource metadatum')
     @resource_metadatum = ResourceMetadatum.new(resource_metadatum_params)
     @add_tags = params[:add_tags]
     my_tags = Array.new
     respond_to do |format|
       #TODO: check for user permissions to add tags
-      for tag in @add_tags
-        if((temp = Tag.find_by Tag_Title: tag) == nil)
-          my_tags << Tag.new(Tag_Title: tag)
-        else
-          my_tags << temp
-        end
-      end
       if @resource_metadatum.save
-        for tag in my_tags
-          if tag.save
-            tag_link = Resource_Tag.new(resource_id: @resource_metadatum.id.to_i, tag_id: tag.id.to_i)
-            tag_link.save
-          else
-            format.html { render :new}
-            format.json { render json: @tag.erros, status: :unprocessable_entity }
+        #Save any new tags to DB
+        if @add_tags != nil
+          for tag in @add_tags
+            tag_link = -1
+            if((temp = Tag.find_by id: tag) == nil)
+              new_tag = Tag.new(Tag_Title: tag);
+              if new_tag.save
+                puts("Creating new tag #{tag} with id #{new_tag.id}")
+                tag_link = ResourceTag.new(resource_metadatum_id: @resource_metadatum.id.to_i, tag_id: new_tag.id.to_i)
+              else
+                format.html { render :new}
+                format.json { render json: @tag.errors, status: :unprocessable_entity }
+              end
+            else
+              puts("Found existing tag #{temp.Tag_Title} with id #{temp.id}")
+              tag_link = ResourceTag.new(resource_metadatum_id: @resource_metadatum.id.to_i, tag_id: temp.id.to_i)
+            end
+            if not tag_link.save
+              format.html { render :new}
+              format.json { render json: tag_link.errors, status: :unprocessable_entity }
+            end
           end
         end
         format.html { redirect_to @resource_metadatum, notice: 'Resource metadatum was successfully created.' }
@@ -89,6 +97,6 @@ class ResourceMetadataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_metadatum_params
-      params.require(:resource_metadatum).permit(:Title, :Author, :publish_date, :Abstract, :Link)
+      params.require(:resource_metadatum).permit(:Title, :Author, :publish_date, :Abstract, :Link, :search)
     end
 end

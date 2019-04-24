@@ -1,10 +1,52 @@
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:30px">
+     
+    <a href="https://mothersonthefrontline.com"> <%= image_tag("motfl.png", :type => :upload, 
+    :width => 70, :height => 70, :crop => :fill ) %> MOTHERS ON THE FRONTLINE</a></h1>
+    <p>Mothers speaking openly about children's mental health</p>
+  </div>
+</div>
+<div class="topnav">
+  
+   <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/users/new"> New User</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/resources';"> Resources </a> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/resources/new"> New Resource</a>
+    </div>
+  </div> 
+  
+  <a href=#>My Information</a>
+  <a href=#>Login</a>
+  
+</div>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Resource Metadata</h1>
 
+<h4>Search resources</h4>
+  <%= form_tag(resource_metadata_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Title</th>
       <th>Author</th>
       <th>Publish date</th>
@@ -15,8 +57,10 @@
   </thead>
 
   <tbody>
-    <% @resource_metadata.each do |resource_metadatum| %>
+    <% if @resource_metadata %>
+      <% @resource_metadata.each do |resource_metadatum| %>
       <tr>
+        <td><%= resource_metadatum.id %></td>
         <td><%= resource_metadatum.Title %></td>
         <td><%= resource_metadatum.Author %></td>
         <td><%= resource_metadatum.publish_date %></td>
@@ -26,6 +70,7 @@
         <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum) %></td>
         <td><%= link_to 'Destroy', resource_metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
