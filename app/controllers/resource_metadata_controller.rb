@@ -64,14 +64,14 @@ class ResourceMetadataController < ApplicationController
               new_author = Author.new(author_name: author);
               if new_author.save
                 puts("Creating new author #{author} with id #{new_author.id}")
-                author_link = Resource_MetadataAuthor.new(resource_metadatum_id: @resource_metadatum.id.to_i, author_id: new_author.id.to_i)
+                author_link = ResourceMetadataAuthor.new(resource_metadatum_id: @resource_metadatum.id.to_i, author_id: new_author.id.to_i)
               else
                 format.html { render :new}
                 format.json { render json: @author.errors, status: :unprocessable_entity }
               end
             else
               puts("Found existing author #{temp.author_name} with id #{temp.id}")
-              author_link = Resource_MetadataAuthor.new(resource_metadatum_id: @resource_metadatum.id.to_i, author_id: temp.id.to_i)
+              author_link = ResourceMetadataAuthor.new(resource_metadatum_id: @resource_metadatum.id.to_i, author_id: temp.id.to_i)
             end
             if not author_link.save
               format.html { render :new}
