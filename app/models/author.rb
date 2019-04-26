@@ -1,4 +1,4 @@
 class Author < ApplicationRecord
-	has_many :resource_metadata_author
-	has_many :resources, :through => :resource_metadata_author
+	has_many :Resource_MetadataAuthor
+	has_many :resources, :through => :Resource_MetadataAuthor
 end

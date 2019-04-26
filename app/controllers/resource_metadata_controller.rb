@@ -29,7 +29,7 @@ class ResourceMetadataController < ApplicationController
     puts('Creating new resource metadatum')
     @resource_metadatum = ResourceMetadatum.new(resource_metadatum_params)
     @add_tags = params[:add_tags]
-    my_tags = Array.new
+    @add_authors = params[:add_authors]
     respond_to do |format|
       #TODO: check for user permissions to add tags
       if @resource_metadatum.save
@@ -53,6 +53,29 @@ class ResourceMetadataController < ApplicationController
             if not tag_link.save
               format.html { render :new}
               format.json { render json: tag_link.errors, status: :unprocessable_entity }
+            end
+          end
+        end
+        #Save any new authors to DB
+        if @add_authors != nil
+          for author in @add_authors
+            author_link = -1
+            if((temp = Author.find_by id: author) == nil)
+              new_author = Author.new(author_name: author);
+              if new_author.save
+                puts("Creating new author #{author} with id #{new_author.id}")
+                author_link = Resource_MetadataAuthor.new(resource_metadatum_id: @resource_metadatum.id.to_i, author_id: new_author.id.to_i)
+              else
+                format.html { render :new}
+                format.json { render json: @author.errors, status: :unprocessable_entity }
+              end
+            else
+              puts("Found existing author #{temp.author_name} with id #{temp.id}")
+              author_link = Resource_MetadataAuthor.new(resource_metadatum_id: @resource_metadatum.id.to_i, author_id: temp.id.to_i)
+            end
+            if not author_link.save
+              format.html { render :new}
+              format.json { render json: author_link.errors, status: :unprocessable_entity }
             end
           end
         end
