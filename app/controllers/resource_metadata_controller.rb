@@ -15,6 +15,7 @@ class ResourceMetadataController < ApplicationController
   # GET /resource_metadata/new
   def new
     @cur_tags = Tag.all
+    @cur_authors = Author.all
     @resource_metadatum = ResourceMetadatum.new
   end
 
