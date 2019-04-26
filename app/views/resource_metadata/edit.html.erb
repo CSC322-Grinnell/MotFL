@@ -1,12 +1,3 @@
-<div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:30px">
-     
-    <a href="https://mothersonthefrontline.com"> <%= image_tag("motfl.png", :type => :upload, 
-    :width => 70, :height => 70, :crop => :fill ) %> MOTHERS ON THE FRONTLINE</a></h1>
-    <p>Mothers speaking openly about children's mental health</p>
-  </div>
-</div>
 
 <div class="topnav">
   <a href="/users">All Users</a>
@@ -19,5 +10,5 @@
 
 <%= render 'form', resource_metadatum: @resource_metadatum %>
 
-<%= link_to 'Show', @resource_metadatum %> |
-<%= link_to 'Back', resource_metadata_path %>
+<%= link_to 'Show', @resource_metadatum, class: 'link_color' %> |
+<%= link_to 'Back', resource_metadata_path, class: 'link_color' %>
