@@ -1,6 +1,14 @@
+
+<div class="topnav">
+  <a href="/users">All Users</a>
+  <a href="/users/new">Add User</a>
+  <a href="/resources">Resources</a>
+  <a href="/resources/new">Add Resources</a>
+</div>
+
 <h1>Editing Resource Metadatum</h1>
 
 <%= render 'form', resource_metadatum: @resource_metadatum %>
 
-<%= link_to 'Show', @resource_metadatum %> |
-<%= link_to 'Back', resource_metadata_path %>
+<%= link_to 'Show', @resource_metadatum, class: 'link_color' %> |
+<%= link_to 'Back', resource_metadata_path, class: 'link_color' %>

@@ -20,7 +20,9 @@
 
   <div class="field">
     <%= form.label :Author %>
-    <%= form.text_field :Author, id: :resource_metadatum_Author %>
+    <select class="js-example-basic-multiple" name="add_authors[]" multiple="multiple">
+      <%= options_from_collection_for_select(@cur_authors, :id, :author_name) %>
+    </select>
   </div>
 
   <div class="field">
@@ -39,6 +41,7 @@
   </div>
 
   <div class="field">
+    <%= form.label :Tags %>
     <select class="js-example-basic-multiple" name="add_tags[]" multiple="multiple">
       <%= options_from_collection_for_select(@cur_tags.all, :id, :Tag_Title) %>
     </select>

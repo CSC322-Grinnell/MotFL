@@ -1,10 +1,20 @@
+
 <p id="notice"><%= notice %></p>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 <h1>Resource Metadata</h1>
+
+<h4>Search resources</h4>
+  <%= form_tag(resource_metadata_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag("Search") %>
+    <% end %>
 
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Title</th>
       <th>Author</th>
       <th>Publish date</th>
@@ -15,21 +25,24 @@
   </thead>
 
   <tbody>
-    <% @resource_metadata.each do |resource_metadatum| %>
+    <% if @resource_metadata %>
+      <% @resource_metadata.each do |resource_metadatum| %>
       <tr>
+        <td><%= resource_metadatum.id %></td>
         <td><%= resource_metadatum.Title %></td>
         <td><%= resource_metadatum.Author %></td>
         <td><%= resource_metadatum.publish_date %></td>
         <td><%= resource_metadatum.Abstract %></td>
         <td><%= resource_metadatum.Link %></td>
-        <td><%= link_to 'Show', resource_metadatum %></td>
-        <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum) %></td>
-        <td><%= link_to 'Destroy', resource_metadatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', resource_metadatum, class: 'link_color' %></td>
+        <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum), class: 'link_color' %></td>
+        <td><%= link_to 'Destroy', resource_metadatum, class: 'link_color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Resource Metadatum', new_resource_metadatum_path %>
+<%= link_to 'New Resource Metadatum', new_resource_metadatum_path, class: 'link_color' %>

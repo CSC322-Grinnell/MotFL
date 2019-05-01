@@ -1,44 +1,7 @@
 
-<style>
-body{
-    background-color: rgb(219, 161, 205);
-    }
-    
-form{
-    text-align:center;
-    border-radius: 20px;
-    
-}
-
-field{
-    text-align:center;
-    border-radius: 20px;
-    
-}
-
-h1{
-     margin-top: -30px;
-   <!-- text-align:center;-->
-}
-
-p{
-     text-align:center;
-}
-img{
-
- margin-top: 70px;
-	float:center;
-
-}
-
-
-
-
-</style>
-
-<center><%= image_tag("motfl.png", :type => :upload, 
-    :width => 200, :height => 200, :crop => :fill) %></center>
 <p id="notice"><%= notice %></p>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#8679;</button>
 
 <h1>List of Users</h1>
 
@@ -60,9 +23,9 @@ img{
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, class: 'link_color' %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: 'link_color' %></td>
+        <td><%= link_to 'Destroy', user, class: 'link_color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -70,4 +33,4 @@ img{
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: 'link_color' %>

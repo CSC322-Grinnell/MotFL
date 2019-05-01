@@ -12,10 +12,121 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
+
 <body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:30px">
+     
+    <a href="https://mothersonthefrontline.com"> <%= image_tag("motfl.png", :type => :upload, 
+    :width => 70, :height => 70, :crop => :fill ) %> MOTHERS ON THE FRONTLINE</a></h1>
+    <p>Mothers speaking openly about children's mental health</p>
+  </div>
+</div>
+
+
+<!---<div class="topnav">
+   <a href="https://mothersonthefrontline.com"> About </a>
+   <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/users';"> Users 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/users/new"> New User</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/resources';"> Resources </a> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/resources/new"> New Resource</a>
+    </div>
+  </div> 
+  
+  <a href=#>My Information</a>
+  <a href=/login>Login</a>
+  
+</div>-->
+
+
+
+
+<div id="navbar">
+  <a href="https://mothersonthefrontline.com">About</a>
+<div class="dropdown">
+<button class="dropbtn" onclick="window.location.href = '/users';"> Users 
+<i class="fa fa-caret-down"></i>
+</button>
+    <div class="dropdown-content">
+      <a href="/users/new"> New User</a>
+    </div>
+  </div> 
+
+<div class="dropdown">
+    <button class="dropbtn" onclick="window.location.href = '/resources';"> Resources </a> 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/resources/new"> New Resource</a>
+    </div>
+  </div> 
+
+
+  <a href=#>My Information</a>
+  <a href=/login>Login</a>
+</div>
+
+<div class="content">
+  </div>
+
 
 
 <%= yield %>
 
+
+
+
+<script>
+  window.onscroll = function() {
+    myFunction()
+    scrollFunction()
+  };
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </body>
 </html>
+

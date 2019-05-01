@@ -1,3 +1,4 @@
+
 <% provide(:title, "Log in") %>
 <h1>Log in</h1>
 
@@ -7,13 +8,15 @@
 
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
+      
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+     <p> <%= f.submit "Log in", class: "btn btn-primary" %></p>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", 'users/new' %></p>
+    <p>New user?</p>
+   <p> <%= link_to "Sign up now!", 'users/new', class: 'link_color' %></p>
   </div>
 </div>
