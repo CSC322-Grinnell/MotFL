@@ -12,7 +12,9 @@ class Ability
     elsif user.volunteer? 
       can [:create, :update], resource_metadatum #volunteer can create and update resources
       cannot :destroy, resource_metadatum #volunteer cannot destroy resources
-      #add that volunteer cannot create new tags
+      cannot :create, tag #volunteer cannot create new tags
+      cannot :destroy, user
+      cannot :edit, user
     else #not sure if we need this part or not
       can :read, :all # user can read any object
       cannot :destroy, resource_metadatum

@@ -37,6 +37,7 @@ class ResourceMetadataController < ApplicationController
           for tag in @add_tags
             tag_link = -1
             if((temp = Tag.find_by id: tag) == nil)
+              authorize! :create, @tag #this method will raise an exception if the user doesn't have permissions to create a new tag
               new_tag = Tag.new(Tag_Title: tag);
               if new_tag.save
                 puts("Creating new tag #{tag} with id #{new_tag.id}")
