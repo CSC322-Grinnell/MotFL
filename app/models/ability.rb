@@ -6,19 +6,20 @@ class Ability
   def initialize(user)
     user ||= User.new 
 
-# this is where their permissions are actually assigned
+
+#TODO: only admins can create new users
+#TODO: set permissions for viewing of users. 
+
+  #assigning permissions to roles
     if user.admin? 
-      can :manage, :all # user can perform any action on any object
-      can :edit, user
+    # admins can perform any action on any object
+      can :manage, :all 
     elsif user.volunteer? 
-      can [:create, :update], ResourceMetadatum #volunteer can create and update resources
-      cannot :destroy, ResourceMetadatum #volunteer cannot destroy resources
-      cannot :create, tag #volunteer cannot create new tags
-      cannot :destroy, user
-      cannot :edit, user
-    else #not sure if we need this part or not
-      can :read, :all # user can read any object
-      cannot :destroy, ResourceMetadatum
+    #volunteer can create and view resources. 
+      can [:create, :read], ResourceMetadatum 
+    else #non-volunteer and non-admin user
+      #regular users can view all resources
+      can :read, ResourceMetadatum
     end
   end
 end

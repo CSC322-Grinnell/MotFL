@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   
   include SessionsHelper
   
+  #catching access denied exception
   rescue_from CanCan::AccessDenied do |_exception|
     redirect_to root_url, notice: "Access Denied"
   end
