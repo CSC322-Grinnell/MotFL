@@ -21,6 +21,8 @@ class ResourceMetadataController < ApplicationController
 
   # GET /resource_metadata/1/edit
   def edit
+    @cur_authors = Author.all
+    @cur_tags = Tag.all
   end
 
   # POST /resource_metadata
