@@ -25,19 +25,19 @@ class ResourceMetadataController < ApplicationController
   # POST /resource_metadata
   # POST /resource_metadata.json
   def create
+    authorize! :create, @ResourceMetadatum
     puts('Creating new resource metadatum')
     @resource_metadatum = ResourceMetadatum.new(resource_metadatum_params)
     @add_tags = params[:add_tags]
     my_tags = Array.new
     respond_to do |format|
-      #TODO: check for user permissions to add tags
       if @resource_metadatum.save
         #Save any new tags to DB
         if @add_tags != nil
           for tag in @add_tags
             tag_link = -1
             if((temp = Tag.find_by id: tag) == nil)
-              authorize! :create, @tag #this method will raise an exception if the user doesn't have permissions to create a new tag
+              authorize! :create, @Tag #this method will raise an exception if the user doesn't have permissions to create a new tag
               new_tag = Tag.new(Tag_Title: tag);
               if new_tag.save
                 puts("Creating new tag #{tag} with id #{new_tag.id}")
@@ -63,12 +63,13 @@ class ResourceMetadataController < ApplicationController
         format.json { render json: @resource_metadatum.errors, status: :unprocessable_entity }
       end
     end
-    authorize! :create, @resource_metadatum #this method will raise an exception if the user doesn't have permissions to create a resource
+    authorize! :create, @ResourceMetadatum #this method will raise an exception if the user doesn't have permissions to create a resource
   end
 
   # PATCH/PUT /resource_metadata/1
   # PATCH/PUT /resource_metadata/1.json
   def update
+    authorize! :edit, @ResourceMetadatum
     respond_to do |format|
       if @resource_metadatum.update(resource_metadatum_params)
         format.html { redirect_to @resource_metadatum, notice: 'Resource metadatum was successfully updated.' }
@@ -83,6 +84,7 @@ class ResourceMetadataController < ApplicationController
   # DELETE /resource_metadata/1
   # DELETE /resource_metadata/1.json
   def destroy
+    authorize! :delete, @ResourceMetadatum
     @resource_metadatum.destroy
     respond_to do |format|
       format.html { redirect_to resource_metadata_url, notice: 'Resource metadatum was successfully destroyed.' }

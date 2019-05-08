@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
     [:admin, :volunteer].each do |role|
         define_method("#{role}?") { roles.exists?(name: role) }
     end
+    
+    def has_role?(role_name)
+        roles.any? { |role| role.name == role_name }
+    end
 end

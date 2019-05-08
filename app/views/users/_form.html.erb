@@ -29,9 +29,10 @@
     <%= f.password_field :password %>
   </div>
   
+  
   User Role
   <div class="field"> 
-    <select class="js-example-basic-single" name="user_role[]">
+    <select class="js-example-basic-single" name="role">
       <%= options_from_collection_for_select(@cur_roles.all, :id, :name) %>
     </select>
   </div>

@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  
   # GET /users
   # GET /users.json
   def index
@@ -28,9 +27,19 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    @temp_role = params[:role]
+  
     respond_to do |format|
       if @user.save
+        #if temp_role != nil
+         # puts("Adding Role #{Role.find(temp_role.to_i).name}")
+         # role_link = RolesUser.new(user_id: @user.id.to_i, role_id: temp_role.id.to_i)
+       # end
+       # if not role_link.save
+        #  format.html {render :new}
+         # format.json {render json: role_link.errors, status: :unprocessable_entity }
+      #  end
+        
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -64,7 +73,6 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
   
 
   private
