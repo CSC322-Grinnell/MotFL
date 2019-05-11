@@ -28,17 +28,20 @@
     <% if @resource_metadata %>
       <% @resource_metadata.each do |resource_metadatum| %>
       <tr>
-        <td><%= resource_metadatum.id %></td>
-        <td><%= resource_metadatum.Title %></td>
-        <td><%= resource_metadatum.Author %></td>
-        <td><%= resource_metadatum.publish_date %></td>
-        <td><%= resource_metadatum.Abstract %></td>
-        <td><%= resource_metadatum.Link %></td>
+        <td><%= resource_metadatum["id"] %></td>
+        <td><%= resource_metadatum["Title"] %></td>
+        <td><%= resource_metadatum["authors"]%></td>
+        <td><%= resource_metadatum["publish_date"] %></td>
+        <td><%= resource_metadatum["Abstract"] %></td>
+        <td><%= resource_metadatum["Link"] %></td>
         <td><%= link_to 'Show', resource_metadatum, class: 'link_color' %></td>
-        <td><%= link_to 'Edit', edit_resource_metadatum_path(resource_metadatum), class: 'link_color' %></td>
+        <td><%= link_to 'Edit', 
+        edit_resource_metadatum_path(ResourceMetadatum.select("id = :id", id: "%#{resource_metadatum["id"]}%")), class: 'link_color' %></td>
         <td><%= link_to 'Destroy', resource_metadatum, class: 'link_color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
+    <% else %>
+        <% puts("No resources defined") %>
     <% end %>
   </tbody>
 </table>
