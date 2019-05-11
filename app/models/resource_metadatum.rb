@@ -28,11 +28,4 @@ class ResourceMetadatum < ApplicationRecord
 			resources_hash_data = ActiveRecord::Base.connection.execute(sql)
 		end
 	end
-
-	def self.prepare_display()
-		authors = ResourceMetadatum
-		.select("id, Title, GROUP_CONCAT(self.author) as authors, publish_date, Abstract, Link")
-		.joins(:authors)
-		.group("authors")
-	end
 end
