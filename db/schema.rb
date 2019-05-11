@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190410154349) do
+ActiveRecord::Schema.define(version: 20190419155314) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string "author_name"
+  end
 
   create_table "resource_metadata", force: :cascade do |t|
     t.string "Title"
@@ -20,6 +24,13 @@ ActiveRecord::Schema.define(version: 20190410154349) do
     t.string "Link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "resource_metadata_authors", id: false, force: :cascade do |t|
+    t.integer "resource_metadatum_id"
+    t.integer "author_id"
+    t.index ["author_id"], name: "index_resource_metadata_authors_on_author_id"
+    t.index ["resource_metadatum_id"], name: "index_resource_metadata_authors_on_resource_metadatum_id"
   end
 
   create_table "resource_tags", force: :cascade do |t|
