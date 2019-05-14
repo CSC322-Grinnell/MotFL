@@ -34,7 +34,7 @@
         <td><%= resource_metadatum["publish_date"] %></td>
         <td><%= resource_metadatum["Abstract"] %></td>
         <td><%= resource_metadatum["Link"] %></td>
-        <td><%= link_to 'Show', resource_metadatum, class: 'link_color' %></td>
+        <td><%= link_to 'Show', ResourceMetadatum.find(resource_metadatum["id"]), class: 'link_color' %></td>
         <td><%= link_to 'Edit', 
         edit_resource_metadatum_path(ResourceMetadatum.find(resource_metadatum["id"])), class: 'link_color' %></td>
         <td><%= link_to 'Destroy', ResourceMetadatum.find(resource_metadatum["id"]), class: 'link_color', method: :delete, data: { confirm: 'Are you sure?' } %></td>
