@@ -14,34 +14,34 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Title %>
+    <%= form.label :Title %><br>
     <%= form.text_field :Title, id: :resource_metadatum_Title %>
   </div>
 
   <div class="field">
-    <%= form.label :Author %>
+    <%= form.label :Author %><br>
     <select class="js-example-basic-multiple" name="add_authors[]" multiple="multiple">
       <%= options_from_collection_for_select(@cur_authors, :id, :author_name) %>
     </select>
   </div>
 
   <div class="field">
-    <%= form.label :publish_date %>
+    <%= form.label :publish_date %><br>
     <%= form.date_select :publish_date, id: :resource_metadatum_publish_date %>
   </div>
 
   <div class="field">
-    <%= form.label :Abstract %>
+    <%= form.label :Abstract %><br>
     <%= form.text_field :Abstract, id: :resource_metadatum_Abstract %>
   </div>
 
   <div class="field">
-    <%= form.label :Link %>
+    <%= form.label :Link %><br>
     <%= form.text_field :Link, id: :resource_metadatum_Link %>
   </div>
 
   <div class="field">
-    <%= form.label :Tags %>
+    <%= form.label :Tags %><br>
     <select class="js-example-basic-multiple" name="add_tags[]" multiple="multiple">
       <%= options_from_collection_for_select(@cur_tags.all, :id, :Tag_Title) %>
     </select>
