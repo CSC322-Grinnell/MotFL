@@ -10,6 +10,7 @@ class ResourceMetadataController < ApplicationController
   # GET /resource_metadata/1
   # GET /resource_metadata/1.json
   def show
+    @authors = ResourceMetadatum.get_authors(@resource_metadatum.id)
   end
 
   # GET /resource_metadata/new

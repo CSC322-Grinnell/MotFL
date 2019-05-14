@@ -28,4 +28,14 @@ class ResourceMetadatum < ApplicationRecord
 			resources_hash_data = ActiveRecord::Base.connection.execute(sql)
 		end
 	end
+	def self.get_authors(id)
+		sql = "SELECT GROUP_CONCAT(authors.author_name, ', ') as authors
+					FROM resource_metadata 
+					LEFT JOIN resource_metadata_authors ON resource_metadata_authors.resource_metadatum_id = resource_metadata.id 
+					LEFT JOIN authors ON resource_metadata_authors.author_id = authors.id
+					WHERE resource_metadata.id = '#{id}'
+					GROUP BY resource_metadata.id"
+		author_data = ActiveRecord::Base.connection.execute(sql).first
+		author_data = author_data["authors"]
+	end
 end
